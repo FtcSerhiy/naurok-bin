@@ -1,7 +1,7 @@
 document.querySelector('button').addEventListener('click', e => {
     e.preventDefault()
 
-	const url = 'http://localhost:8000/'
+	const url = 'https://naurok-test-production.up.railway.app/'
     const testName = document.querySelector('#name').value
     const amountQuestions = document.querySelector('#amount').value
     const subject = document.querySelector('#subject').value
