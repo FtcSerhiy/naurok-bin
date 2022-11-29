@@ -15,7 +15,7 @@ section {
     width: 100%;
 }
 
-form {
+.one {
     padding: 40px;
     background-color: #fff;
     display: flex;
@@ -108,7 +108,7 @@ button {
     border-radius: 3px;
 }
 
-main > div {
+.block {
 	border-radius: 10px;
 	background-color: #fff;
 	padding: 10px;
@@ -137,4 +137,66 @@ select {
 	padding: 6px 12px;
 	color: #757575;
 	border: 1px solid #cfd8dc;
+}
+
+.request {
+	padding: 10px;
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	color: #506677;
+}
+
+.popup {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, .8);
+	top: 0;
+	left: 0;
+	opacity: none;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all .8s ease 0s;
+}
+
+.popup.open {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup.open .popup__content {
+	transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+	opacity: 1;
+}
+
+.popup__body {
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+	/* align-items: center */
+}
+
+.popup__content {
+	margin-top: 20px;
+	border-radius: 10px;
+	height: 80%;
+	width: 80%;
+	background-color: #f2f2f2;
+	max-width: 800px;
+	padding: 30px;
+}
+
+.find {
+	display: flex;
+	justify-content: space-between;
+}
+
+.find > button {
+	border-radius: 10px;
+	width: 10%;
+}
+
+.find > input {
+	border-radius: 10px;
 }
