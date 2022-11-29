@@ -6,7 +6,7 @@ document.querySelector('button').addEventListener('click', e => {
     const amountQuestions = document.querySelector('#amount').value
     const subject = document.querySelector('#subject').value
     const klass = document.querySelector('#klas').value
-	let data = {
+	const data = {
 		name: testName,
 		amount: amountQuestions,
 		subject: subject,
@@ -15,7 +15,7 @@ document.querySelector('button').addEventListener('click', e => {
 	document.querySelector('form').remove()
 	document.querySelector('main').innerHTML = '<span style="color:grey">Click \'/\' for open search</span>'
 	
-	data = displayResponseData(getResponse(url, data))
+	getResponse(url, data)
 	document.addEventListener('keydown', e => {
 		if (e.code === 'Slash') {
 			const popup = document.querySelector('.popup')
